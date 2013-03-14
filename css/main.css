@@ -1,3 +1,9 @@
+.contactbox > .row-fluid > .span4 {
+    text-align: right;
+}
+.contactbox > .row-fluid > .span4 > span {
+    text-align: right;
+}
 @media print {
     .navbar { display:none; }
     #about img { display: none;}
@@ -14,11 +20,16 @@
     body {
         padding-top: 60px;
     }
-
-    section#experience .row {
+    section#about .row {
+        border-top: none;
+    }
+    section .row {
         margin-bottom: 20px;
         padding-top: 5px;
         border-top: 1px solid #ccc;
+    }
+    section .row ul {
+        margin-top: 10px;
     }
     .social a {
         background-image: url("../img/AquaticusSocialIcons.jpg");
