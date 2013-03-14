@@ -1,0 +1,43 @@
+@media print {
+    .navbar { display:none; }
+    #about img { display: none;}
+    div.row {
+        page-break-inside: avoid;
+    }
+    section h2 { page-break-after: avoid; page-break-before: auto;}
+    span.pagebrake { page-break-before: always;}
+    .contactbox .row-fluid div { float:left; display: inline; width: 100px; }
+    blockquote.favquote { display:none; }
+    .hidden-print { display:none; }
+}
+@media screen {
+    body {
+        padding-bottom: 60px;
+        padding-top: 10px;
+    }
+
+    section#experience .row {
+        margin-bottom: 20px;
+        padding-top: 5px;
+        border-top: 1px solid #ccc;
+    }
+    .social a {
+        background-image: url("../img/AquaticusSocialIcons.jpg");
+        background-repeat: no-repeat;
+        line-height: 60px;
+        background-position: -245px -15px;
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+
+    }
+    .social .facebook {
+        background-position: -245px -15px;
+    }
+    .social .linkedin {
+        background-position: -310px -79px;
+    }
+    .social .linkedin {
+        background-position: -310px -79px;
+    }
+}
