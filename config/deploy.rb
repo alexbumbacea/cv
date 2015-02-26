@@ -33,4 +33,13 @@ role :app, "white.linuxin.ro"                          # This may be the same as
 #   end
 # end
 
+after "deploy:restart", "deploy:fix"
+
+namespace :deploy do
+  task :fix, :roles => [:app, :web], :except => { :no_release => true } do
+    run "#{try_sudo} chown -R www-data:www-data #{latest_release}/public"
+    run "#{try_sudo} /etc/init.d/nginx reload"
+  end
+end
+
 ssh_options[:forward_agent] = true
